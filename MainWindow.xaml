@@ -1,0 +1,320 @@
+﻿<Window x:Class="CamFicep.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CamFicep"
+        mc:Ignorable="d"
+Title="CamFicep (Excalibur12)" Height="820" Width="1170" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" KeyDown="Window_KeyDown" Loaded="Window_Loaded">
+    <Grid MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF362987" Offset="0.646"/>
+                <GradientStop Color="#FF29183A"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition Height="155"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="5" Orientation="Horizontal">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF232D46" Offset="1"/>
+                    <GradientStop Color="#FF718EDA"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="13">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF362987" Offset="0.354"/>
+                    <GradientStop Color="#FF29183A" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <TextBlock Text="Ident. Item" Foreground="White" Margin="10,6,10,0" FontStyle="Italic"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="142"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="txt_item" Margin="10,0,2,0" Foreground="Black" Background="#FFE8E8E8" BorderBrush="Black" Padding="3,2,0,0" FontSize="14" Grid.Column="0" FontFamily="Rubik"/>
+                <Button x:Name="btn_open" Grid.Column="1" Content="ABRIR" Width="46" Padding="1,-1,1,1" Background="MidnightBlue" BorderBrush="White" Foreground="White" Cursor="Hand" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="21" Margin="1,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Click="btn_open_Click"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="142"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Nº Ordem" Foreground="White" Margin="10,2,2,0" FontStyle="Italic" Grid.Column="0" Grid.Row="0"/>
+                <TextBlock Text="Qtde" Foreground="White" Margin="0,2,10,0" FontStyle="Italic" Grid.Column="1" Grid.Row="0"/>
+                <TextBox x:Name="txt_ordem" Margin="10,0,2,0" Foreground="Black" Background="#FFE8E8E8" BorderBrush="Black" Padding="3,2,0,0" FontSize="14" Grid.Column="0" Grid.Row="1" FontFamily="Rubik" LostFocus="txt_ordem_LostFocus"/>
+                <TextBox x:Name="txt_qtde" Margin="0,0,-11,0" Foreground="Black" Background="#FFE8E8E8" BorderBrush="Black" Padding="3,2,0,0" FontSize="14" Grid.Column="1" Grid.Row="1" FontFamily="Rubik"/>
+            </Grid>
+            <Grid Height="40">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="142"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Material" Foreground="White" Margin="10,2,10,0" FontStyle="Italic" Grid.Column="0" Grid.Row="0"/>
+                <TextBlock Text="Pedido" Foreground="White" Margin="0,2,10,0" FontStyle="Italic" Grid.Column="1" Grid.Row="0"/>
+                <TextBox x:Name="txt_material" Margin="10,0,2,10" Foreground="Black" Background="#FFE8E8E8" BorderBrush="Black" Padding="3,2,0,0" FontSize="14" Grid.Column="0" Grid.Row="1" FontFamily="Rubik" Text="ASTM A52"/>
+                <TextBox x:Name="txt_pedido" Margin="0,0,0,10" Foreground="Black" Background="#FFE8E8E8" BorderBrush="Black" Padding="3,2,0,0" FontSize="14" Grid.Column="1" Grid.Row="1" FontFamily="Rubik"/>
+
+            </Grid>
+            <TextBlock Text="Programador" Foreground="White" Margin="10,2,10,0" FontStyle="Italic"/>
+            <TextBox x:Name="txt_programador" Margin="10,0,10,2" Foreground="Black" Background="#FFE8E8E8" BorderBrush="Black" Text="Wesley Panazzolo" Padding="3,2,0,0" FontSize="14" FontFamily="Rubik"/>
+            <TextBlock Text="Selecionados" Foreground="White" Margin="10,0" FontStyle="Italic"/>
+            <DataGrid x:Name="dg_selecionados" Margin="10,0,10,2" Height="250" Background="{x:Null}" Foreground="White" HeadersVisibility="Column" BorderBrush="White" FontSize="11" RowBackground="DarkBlue" HorizontalScrollBarVisibility="Disabled" HorizontalGridLinesBrush="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" GridLinesVisibility="Horizontal" SelectedCellsChanged="dg_selecionados_SelectedCellsChanged">
+                <DataGrid.Resources>
+                    <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}" >
+                        <Setter Property="Background" Value="MidnightBlue" />
+                        <Setter Property="Foreground" Value="White" />
+                        <Setter Property="BorderBrush" Value="White"/>
+                        <Setter Property="Height" Value="18"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                </DataGrid.Resources>
+                <!--<DataGrid.Columns>
+                    <DataGridTextColumn Foreground="White" Header="ABA" Width="25"/>
+                    <DataGridTextColumn Foreground="White" Header="ORIGEM" Width="45"/>
+                    <DataGridTextColumn Foreground="White" Header="DIAM" Width="31"/>
+                    <DataGridTextColumn Foreground="White" Header="X" Width="39"/>
+                    <DataGridTextColumn Foreground="White" Header="Y" Width="39"/>
+                </DataGrid.Columns>-->
+            </DataGrid>
+            <TextBlock Text="ORIGEM" Margin="10,0,10,0" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <Grid Margin="10,2,10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button x:Name="btn_se" Grid.Column="0" Grid.Row="0" Foreground="White" BorderBrush="Black" FontWeight="Bold" Margin="1,1,2,1" Height="30" Click="btn_se_Click">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF00FF5D" Offset="0"/>
+                            <GradientStop Color="#FF007229" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <Button.Content>
+                        <Path Stroke="White" StrokeThickness="2"  Data="m 3 20 v -16 h 25 m -22 0 a 2 2 180 1 0 -6 0 a 2 2 180 1 0 6 0 z"/>
+                    </Button.Content>
+                </Button>
+                <Button x:Name="btn_sd" Grid.Column="1" Grid.Row="0" FlowDirection="RightToLeft" Foreground="White" BorderBrush="Black" FontWeight="Bold" Margin="2,1,1,1" Height="30" Click="btn_sd_Click">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Red" Offset="0"/>
+                            <GradientStop Color="#FF850000" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <Button.Content>
+                        <Path Stroke="White" StrokeThickness="2"  Data="m 3 20 v -16 h 25 m -22 0 a 2 2 180 1 0 -6 0 a 2 2 180 1 0 6 0 z"/>
+                    </Button.Content>
+                </Button>
+                <Button x:Name="btn_me" Grid.Column="0" Grid.Row="1" Foreground="White" BorderBrush="Black" FontWeight="Bold" Margin="1,1,2,1" Height="30" Click="btn_me_Click">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF00F3FF" Offset="0"/>
+                            <GradientStop Color="#FF006468" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <Button.Content>
+                        <Path Stroke="White" StrokeThickness="2"  Data="m 1 0 v 22 m 0 -11 h 3 m 2 0 h 3 m 2 0 h 3 m 2 0 h 3 m 2 0 h 3m -20 0 a 2 2 180 1 0 -6 0 a 2 2 180 1 0 6 0 z"/>
+                    </Button.Content>
+                </Button>
+                <Button x:Name="btn_md" Grid.Column="1" Grid.Row="1" FlowDirection="RightToLeft" Foreground="White" BorderBrush="Black" FontWeight="Bold" Margin="2,1,1,1" Height="30" Click="btn_md_Click">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFA200FF" Offset="0"/>
+                            <GradientStop Color="#FF55009C" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <Button.Content>
+                        <Path Stroke="White" StrokeThickness="2"  Data="m 1 0 v 22 m 0 -11 h 3 m 2 0 h 3 m 2 0 h 3 m 2 0 h 3 m 2 0 h 3m -20 0 a 2 2 180 1 0 -6 0 a 2 2 180 1 0 6 0 z"/>
+                    </Button.Content>
+                </Button>
+                <Button x:Name="btn_ie" Grid.Column="0" Grid.Row="2" Foreground="White" BorderBrush="Black" FontWeight="Bold" Margin="1,1,2,1" Height="30" Click="btn_ie_Click">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFFA200"/>
+                            <GradientStop Color="#FF7A4D00" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <Button.Content>
+                        <Path Stroke="White" StrokeThickness="2"  Data="m 3 0 v 16 h 25 m -22 0 a 2 2 180 1 0 -6 0 a 2 2 180 1 0 6 0 z"/>
+                    </Button.Content>
+                </Button>
+                <Button x:Name="btn_id" Grid.Column="1" Grid.Row="2" FlowDirection="RightToLeft" Foreground="White" BorderBrush="Black" FontWeight="Bold" Margin="2,1,1,1" Height="30" Click="btn_id_Click">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF003AFF" Offset="0"/>
+                            <GradientStop Color="#FF000C57" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <Button.Content>
+                        <Path Stroke="White" StrokeThickness="2"  Data="m 3 0 v 16 h 25 m -22 0 a 2 2 180 1 0 -6 0 a 2 2 180 1 0 6 0 z"/>
+                    </Button.Content>
+                </Button>
+                <!--<Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Stroke="White"/>-->
+            </Grid>
+            <Label Name="lbl_larg" Content="Largura" Foreground="White" HorizontalContentAlignment="Center" Margin="40,0,0,12" FontSize="14"/>
+            <Label Name="lbl_altura" Content="Altura" Foreground="White" HorizontalContentAlignment="Center" Margin="-52,15,0,-150" FontSize="14" RenderTransformOrigin="0.5,0.5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Path Stroke="White" StrokeThickness="1" Data=" m 55 0 v -25 m 130 0 v 25 m 0 -15 l -12 -5  v 10 z m -12 0 h -106 m 0 -5 v 10 l -12 -5 z  m -12 25 h 130 v10 h-60 v130 h60 v10 h-130 v-10 h60 v-130 h-60 z m -4 0 h-30 m 10 0 l -5 12 h 10z m 0 12 v 125 m -5 0 h 10 l -5 12 z m -5 12 h 30" Fill="White"/>
+        </StackPanel>
+        <Canvas Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <Path Stroke="White" StrokeThickness="1" Data="m 1 45 v -25 m 895 0 v 25 m 0 -15 l -12 -5  v 10 z m -12 0 h -870 m 0 -5 v 10 l -12 -5 z"/>
+        </Canvas>
+        <Rectangle x:Name="aba_db" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Stroke="Black" StrokeThickness="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF747474" Offset="0.118"/>
+                    <GradientStop Color="#FFA3A3A3" Offset="0.535"/>
+                    <GradientStop Color="#FF949494" Offset="0.934"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" Stroke="Black" StrokeThickness="2" Fill="#FF949494"/>
+        <Rectangle Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2" Stroke="Black" StrokeThickness="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF747474" Offset="0.538"/>
+                    <GradientStop Color="#FFA3A3A3" Offset="0.833"/>
+                    <GradientStop Color="#FF949494" Offset="0.903"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" Stroke="Black" StrokeThickness="2" Fill="#FF949494"/>
+        <Rectangle Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="2" Stroke="Black" StrokeThickness="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF747474" Offset="0.118"/>
+                    <GradientStop Color="#FFA3A3A3" Offset="0.535"/>
+                    <GradientStop Color="#FF949494" Offset="0.903"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Name="lbl_comp_total" Grid.Column="2" Grid.ColumnSpan="2" Text="Comprimento Total" HorizontalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold" Margin="0,0,0,0" Padding="0,8,0,0"/>
+
+        <Canvas Name="CanvasDB" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Canvas Name="CanvasDC" Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <Canvas Name="CanvasDA" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="2"/>
+
+        <TextBlock Text="Status:" Grid.Column="0" Grid.Row="13" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Margin="10,0,0,0"/>
+        <TextBlock x:Name="lbl_status" Text="Concluído." Grid.Column="0" Grid.Row="13" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Margin="69.3,0,0,0" Grid.ColumnSpan="4"/>
+        <TextBlock Grid.Column="2" Grid.Row="10" Text="Saída/Arquivo" VerticalAlignment="Bottom" HorizontalAlignment="Left" Foreground="White" FontSize="14" FontWeight="Bold"/>
+        <TextBox x:Name="txt_saida" Grid.Column="2" Grid.Row="11" Margin="0,0,0,15" Grid.ColumnSpan="2" Background="#FF000053" BorderBrush="White" Foreground="Gray" BorderThickness="2" Text="AGUARDANDO PROCESSAMENTO" FontStyle="Italic" VerticalContentAlignment="Center" FontSize="24" Padding="10,0" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+        <GroupBox Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="2" Foreground="White" Header="Definições" FontWeight="Bold" FontSize="14" BorderThickness="0.4,0.4,0.4,0.6">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="387"/>
+                    <ColumnDefinition Width="32"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="28"/>
+                    <RowDefinition Height="27"/>
+                    <RowDefinition Height="24"/>
+                    <RowDefinition Height="26"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="1" Grid.Row="0" Text="Destino" VerticalAlignment="Bottom" Height="19"/>
+                <TextBox 
+                    x:Name="txt_destino"
+                    Text="Y:\Cnc\Ficep_Cnc\" 
+                    Grid.Column="1" Grid.Row="1"
+                    Padding="0,3,0,0"
+                    FontWeight="Normal"
+                />
+                <TextBlock Grid.Column="1" Grid.Row="2" Text="Configuração" VerticalAlignment="Bottom" Height="19"/>
+                <TextBox
+                    Name="txt_caminhos"
+                    Text="R:\Rubens\30_Prog\Caminhos.txt"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Margin="0"
+                    Padding="0,3,0,0"
+                    FontWeight="Normal"
+                />
+                <Button 
+                    Name="btn_SelectFilePath"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    Background="{x:Null}"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Content=". . ."
+                    Foreground="White" Click="btn_SelectFilePath_Click"
+                />
+                <Button
+                    Name="btn_SelectCaminhosTxt"
+                    Grid.Column="2"
+                    Grid.Row="3"
+                    Background="{x:Null}"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    Content=". . ."
+                    Foreground="White" Click="btn_SelectCaminhosTxt_Click"
+                />
+                <TextBlock Text="Perfil" Grid.Column="4" Grid.Row="0" VerticalAlignment="Bottom" Height="19"/>
+                <ComboBox x:Name="cb_perfis" Grid.Column="4" Grid.Row="1" FontWeight="Normal" DisplayMemberPath="Nome" />
+                <Button x:Name="btn_processar" Grid.Column="6" Grid.Row="1" Background="{x:Null}" BorderBrush="White" BorderThickness="2" Content="PROCESSAR" Foreground="White" Click="btn_processar_Click"/>
+                <Button x:Name="btn_reset" Grid.Column="6" Grid.Row="3" Background="{x:Null}" BorderBrush="White" BorderThickness="2" Content="NOVO" Foreground="White" Click="btn_reset_Click"/>
+            </Grid>
+        </GroupBox>
+        <ProgressBar x:Name="pgb_processos" Margin="0" BorderBrush="Black" Background="{x:Null}" Width="150" HorizontalAlignment="Right" VerticalAlignment="Center" Height="15" Grid.Column="3" Grid.Row="13">
+            <ProgressBar.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0074FF" Offset="0"/>
+                    <GradientStop Color="#FF100047" Offset="1"/>
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+    </Grid>
+</Window>

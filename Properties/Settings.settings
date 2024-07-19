@@ -1,0 +1,10 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CamFicep.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="txtPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">R:\Rubens\30_Prog\Caminhos.txt
+</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
